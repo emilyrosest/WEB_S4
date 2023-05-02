@@ -5,7 +5,8 @@
     <DateComponent :date="todayDate" @date-selected="onDateSelected" @update-current-date="updateCurrentDate"></DateComponent>
   </div>
   <ExplanationComponent :explanation="apodData?.explanation"></ExplanationComponent>
-  <EpicComponent :date="apodData?.date"></EpicComponent>
+  <IndexComponent></IndexComponent>
+  <FooterComponent></FooterComponent>
 </template>
 
 <script>
@@ -13,7 +14,8 @@ import HeaderComponent from './components/HeaderComponent.vue'
 import PictureComponent from './components/PictureComponent.vue'
 import DateComponent from './components/DateComponent.vue'
 import ExplanationComponent from './components/ExplanationComponent.vue'
-import EpicComponent from './components/EpicComponent.vue'
+import IndexComponent from './components/IndexComponent.vue'
+import FooterComponent from './components/FooterComponent.vue'
 import {getDataOfToday, getDataFromDate} from '@/services/api/apodAPI.js'
 
 export default {
@@ -23,7 +25,8 @@ export default {
     PictureComponent,
     DateComponent,
     ExplanationComponent,
-    EpicComponent
+    IndexComponent,
+    FooterComponent
   },
   data() {
     return {

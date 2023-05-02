@@ -18,7 +18,7 @@
       <button @click="next">&gt;</button>
     </div>
     <div class="advertising" v-if="!nextDate">
-      <p>You're not a space traveler</p>
+      <p>Oops! Come back tomorrow</p>
     </div>
   </div>
 </template>
@@ -44,8 +44,10 @@
       // },
       nextDate() {
         const todayDate = getTodayDate();
-        const nextDate = getNextDate(this.currentDate);
-        return nextDate && nextDate !== getNextDate(todayDate);
+        if (this.currentDate != getNextDate(todayDate)) {
+          return getNextDate(this.currentDate);
+        }
+        return null;
       },
     },
     methods: {
