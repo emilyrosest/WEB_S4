@@ -13,13 +13,31 @@
 
 <style>
   .explanation {
-    background-color: black;
+    background-image: url(../assets/systems-nasa-galaxy-sky-meteor-planet-pictures-21.png);
     width: 80%;
-    font-family: Comic Sans MS;
+    font-family: Papyrus;
     font-style: italic;
-    font-size: large;
-    border-image: url(../assets/Frame\ 1.png) 80 fill / 50px / 20px space;
+    font-size: 2vw;
     margin-bottom: 0;
+    padding: 1vw;
+    padding-bottom: 2vw;
+    border-style: dotted;
+    border-color: aliceblue;
+  }
+
+  @media only screen and (max-width: 768px) {
+    .explanation {
+      font-size: 4vw;
+      border-image-width: 4vw;
+      padding: 2vw;
+    }
+  }
+  @media only screen and (min-width: 1024px) {
+    .explanation {
+      font-size: 1.5vw;
+      border-image-width: 1.5vw;
+      padding: 0.5vw;
+    }
   }
 </style>
 

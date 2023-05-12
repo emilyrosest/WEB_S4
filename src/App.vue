@@ -1,16 +1,22 @@
 <template>
   <div class="container">
+    <HeaderComponent></HeaderComponent>
     <apodGallery/>
+    <FooterComponent></FooterComponent>
   </div>
 </template>
 
 <script>
+import HeaderComponent from './components/HeaderComponent.vue'
 import apodGallery from './Gallery.vue'
+import FooterComponent from './components/FooterComponent.vue'
 
 export default {
   name: 'App',
   components: {
-    apodGallery
+    HeaderComponent,
+    apodGallery,
+    FooterComponent
   },
 }
 </script>
@@ -18,6 +24,7 @@ export default {
 <style>
   #app {
     background-image: url("./assets/maxresdefault.jpg");
+    background-image: url(./assets/systems-nasa-galaxy-sky-meteor-planet-pictures-21.png);
     margin: 0;
     padding: 0;
   }

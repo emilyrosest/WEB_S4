@@ -90,31 +90,61 @@
 </script>
 
 <style>
+.date {
+  background-image: url(../assets/systems-nasa-galaxy-sky-meteor-planet-pictures-21.png);
+  width: 20%;
+  border-image: url(../assets/Frame\ 2.png) 70 fill / 55px / 30px space;
+  display: flex;
+  flex-direction: column;
+  font-size: large;
+  align-items: center; 
+  padding: 10px;
+  font-family: Papyrus;
+}
+
+@media (max-width: 600px) {
   .date {
-    background-color: black;
-    width: 20%;
-    border-style: dotted;
-    border-color: aliceblue;
-    display: flex;
-    flex-direction: column;
-    font-size: large;
+    font-size: medium;
+    width: 80%;
   }
-  .today {
-    padding: 10px;
+}
+
+.today {
+  padding: 10px;
+  display: flex;
+  justify-content: center; 
+}
+
+.dateSelector {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.random {
+  padding: 10px;
+  display: flex;
+  justify-content: center; 
+}
+
+.currentDate {
+  font-size: x-large;
+  text-align: center;
+  margin: 10px 0; 
+}
+
+.advertising {
+  font-family: Papyrus;
+  font-size: 80px;
+  text-align: center;
+  margin: 10px 0; 
+}
+
+
+@media (max-width: 600px) {
+  .next {
+    display: none;
   }
-  .dateSelector {
-    padding: 10px;
-  }
-  .random {
-    padding: 10px;
-  }
-  .currentDate {
-    font-size: x-large;
-    text-align: center;
-  }
-  .advertising {
-    font-family: Papyrus;
-    font-size: 80px;
-  }
+}
 </style>
 

@@ -9,33 +9,47 @@
 </template>
 
 <script>
-
 export default {
-  name: 'PictureComponent',
-  props: ["title", "pictureUrl", "author"]
+    name: 'PictureComponent',
+    props: ["title", "pictureUrl", "author"]
 }
-
 </script>
 
 <style>
     .picture {
-        background-color: black;
-        width: 70%;
-        border-image: url(../assets/Frame\ 2.png) 70 fill / 55px / 30px space;
+        background-image: url(../assets/systems-nasa-galaxy-sky-meteor-planet-pictures-21.png);
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto;
+        border-style: double;
+        border-color: aliceblue;
+        box-sizing: border-box;
+        padding: 20px;
+        font-family: Papyrus;
     }
     .title {
-        padding: 20px;
         font-size: x-large;
+        margin-bottom: 20px;
+        text-align: center;
     }
     .author {
-        padding: 20px;
         font-size: large;
-        text-align: end;
+        text-align: right;
+        margin-top: 20px;
     }
     .image {
-        height: 600px;
-        display: flex;
-        justify-content: center;
+        position: relative;
+        overflow: hidden;
+        padding-bottom: 56.25%; /* Aspect ratio 16:9 */
+    }
+    img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        max-width: 100%;
+        max-height: 100%;
+        margin: auto;
     }
 </style>
-

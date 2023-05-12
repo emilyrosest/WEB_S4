@@ -10,12 +10,17 @@
     }
 </script>
 
-<style>
-    .hearder, h1 {
-        margin: 0;
-        font-family: Papyrus;
-        font-size: 100px;
+<style scoped>
+    .header {
         text-align: center;
+    }
+    
+    h1 {
+        font-family: Papyrus, sans-serif;
+        font-size: 5vw;
+        color: white;
+        margin: 0;
+        padding: 20px;
     }
 </style>
 

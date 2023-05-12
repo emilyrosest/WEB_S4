@@ -1,32 +1,28 @@
 <template>
-  <HeaderComponent></HeaderComponent>
   <div class="body">
     <PictureComponent :title="apodData?.title" :pictureUrl="apodData?.url" :author="apodData?.copyright"></PictureComponent>
     <DateComponent :date="todayDate" @date-selected="onDateSelected" @update-current-date="updateCurrentDate"></DateComponent>
   </div>
-  <ExplanationComponent :explanation="apodData?.explanation"></ExplanationComponent>
-  <IndexComponent></IndexComponent>
-  <FooterComponent></FooterComponent>
+  <div class="explanation-container">
+    <ExplanationComponent :explanation="apodData?.explanation"></ExplanationComponent>
+  </div>
+  <!-- <IndexComponent></IndexComponent> -->
 </template>
 
 <script>
-import HeaderComponent from './components/HeaderComponent.vue'
 import PictureComponent from './components/PictureComponent.vue'
 import DateComponent from './components/DateComponent.vue'
 import ExplanationComponent from './components/ExplanationComponent.vue'
-import IndexComponent from './components/IndexComponent.vue'
-import FooterComponent from './components/FooterComponent.vue'
+//import IndexComponent from './components/IndexComponent.vue'
 import {getDataOfToday, getDataFromDate} from '@/services/api/apodAPI.js'
 
 export default {
   name: 'apodGallery',
   components: {
-    HeaderComponent,
     PictureComponent,
     DateComponent,
     ExplanationComponent,
-    IndexComponent,
-    FooterComponent
+    //IndexComponent,
   },
   data() {
     return {
@@ -59,5 +55,26 @@ export default {
   .body {
     display: flex;
     justify-content: center;
+    align-items: center; 
+  }
+
+  .explanation-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px
+  }
+
+  @media (max-width: 767px) {
+    .body {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .picture-container,
+    .date-container {
+      flex: auto;
+      max-width: none;
+      width: 100%;
+    }
   }
 </style>
