@@ -15,7 +15,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
     .picture {
         background-image: url(../assets/systems-nasa-galaxy-sky-meteor-planet-pictures-21.png);
         width: 100%;
@@ -40,7 +40,7 @@ export default {
     .image {
         position: relative;
         overflow: hidden;
-        padding-bottom: 56.25%; /* Aspect ratio 16:9 */
+        padding-bottom: 56.25%;
     }
     img {
         position: absolute;

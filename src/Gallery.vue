@@ -6,14 +6,16 @@
   <div class="explanation-container">
     <ExplanationComponent :explanation="apodData?.explanation"></ExplanationComponent>
   </div>
-  <!-- <IndexComponent></IndexComponent> -->
+  <BirthdayComponent></BirthdayComponent>
+  <IndexComponent></IndexComponent>
 </template>
 
 <script>
 import PictureComponent from './components/PictureComponent.vue'
 import DateComponent from './components/DateComponent.vue'
 import ExplanationComponent from './components/ExplanationComponent.vue'
-//import IndexComponent from './components/IndexComponent.vue'
+import IndexComponent from './components/IndexComponent.vue'
+import BirthdayComponent from './components/BirthdayComponent.vue'
 import {getDataOfToday, getDataFromDate} from '@/services/api/apodAPI.js'
 
 export default {
@@ -22,7 +24,8 @@ export default {
     PictureComponent,
     DateComponent,
     ExplanationComponent,
-    //IndexComponent,
+    IndexComponent,
+    BirthdayComponent
   },
   data() {
     return {

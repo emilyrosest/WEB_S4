@@ -1,46 +1,58 @@
 <template>
-<div class="index">
-    <div v-for="entry in entries" :key="entry.date">
-    <router-link :to="{name: 'picture', params: {date: entry.date}}" @click="updateSelectedDate(entry.date)">
+    <div class="index">
+      <div v-for="entry in entries" :key="entry.date" class="entry">
         <img :src="entry.thumbnail" :alt="entry.title" />
-        <a href=entry.thumbnail>{{ entry.title }}</a>
-    </router-link>
+        <p class="title"><u>{{ entry.title }}</u></p>
+        <p>{{ entry.date }}</p>
+      </div>
     </div>
-    <div class="selected-date">
-        <h2>Selected date: {{ selectedDate }}</h2>
-    </div>
-</div>
-</template>
-
-<script>
-import { getRandomData } from '@/services/api/apodAPI'
-
-export default {
+  </template>
+  
+  <script>
+  import { getRandomData } from '@/services/api/apodAPI'
+  
+  export default {
     name: "IndexComponent",
     data() {
-        return {
+      return {
         entries: [],
-        selectedDate: '',
-        };
+      };
     },
     async created() {
-        const data = await getRandomData();
-        this.entries = data.map((entry) => ({
+      const data = await getRandomData();
+      this.entries = data.map((entry) => ({
         date: entry.date,
         title: entry.title,
         thumbnail: entry.url,
-        }));
+      }));
     },
-};
-</script>
-
-
-<style scoped> 
-.index {
+  };
+  </script>
+  
+  <style scoped>
+  .index {
     display: flex;
-}
-img {
+    flex-wrap: wrap;
+    justify-content: center;
+    border-style: groove;
+    font-family: Papyrus;
+    margin-bottom: 60px;
+  }
+  
+  .entry {
     width: 200px;
-}
-
-</style>
+    margin: 10px;
+    text-align: center;
+  }
+  
+  img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .title {
+    margin-top: 5px;
+    font-size: 14px;
+  }
+  </style>

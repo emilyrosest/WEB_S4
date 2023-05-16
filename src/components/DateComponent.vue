@@ -89,7 +89,7 @@
   }
 </script>
 
-<style>
+<style scoped>
 .date {
   background-image: url(../assets/systems-nasa-galaxy-sky-meteor-planet-pictures-21.png);
   width: 20%;
@@ -135,7 +135,7 @@
 
 .advertising {
   font-family: Papyrus;
-  font-size: 80px;
+  font-size: 50px;
   text-align: center;
   margin: 10px 0; 
 }
