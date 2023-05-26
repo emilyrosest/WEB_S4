@@ -37,11 +37,6 @@
       }
     },
     computed: {
-      // previousDate() {
-      //   const previousDate = getPreviousDate(this.currentDate);
-      //   const todayDate = getTodayDate();
-      //   return previousDate && previousDate !== todayDate;
-      // },
       nextDate() {
         const todayDate = getTodayDate();
         if (this.currentDate != getNextDate(todayDate)) {

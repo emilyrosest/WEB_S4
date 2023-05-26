@@ -8,13 +8,13 @@
 </template>
 
 <script>
-    export default {
-        name: 'FooterComponent'
-    }
+export default {
+    name: 'FooterComponent'
+}
 </script>
 
 <style>
-.footer {
+  .footer {
     margin: 0;
     font-family: Papyrus;
     font-size: 5vw;

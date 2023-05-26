@@ -1,21 +1,21 @@
 <template>
   <div class="container">
     <HeaderComponent></HeaderComponent>
-    <apodGallery/>
+    <GalleryComponent/>
     <FooterComponent></FooterComponent>
   </div>
 </template>
 
 <script>
 import HeaderComponent from './components/HeaderComponent.vue'
-import apodGallery from './Gallery.vue'
+import GalleryComponent from './Gallery.vue'
 import FooterComponent from './components/FooterComponent.vue'
 
 export default {
   name: 'App',
   components: {
     HeaderComponent,
-    apodGallery,
+    GalleryComponent,
     FooterComponent
   },
 }

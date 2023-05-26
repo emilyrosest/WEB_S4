@@ -1,15 +1,15 @@
 <template>
-    <div class="birthday">
-        <h3>My Birthday</h3>
-        <input type="date" id="date-picker" v-model="birthday" @change="saveBirthday">
-        <p class="date">{{ birthday }}</p>
-        <p class="title"><u>{{ apodDataOfBirthday.title }}</u></p>
-        <div class="image">
-            <img v-bind:src="apodDataOfBirthday.url"/>
-        </div>
-        <p class="author"><i>{{ apodDataOfBirthday.copyright }}</i></p>
-        <p>{{ apodDataOfBirthday.explanation }}</p>
-    </div>
+  <div class="birthday">
+      <h3>My Birthday</h3>
+      <input type="date" id="date-picker" v-model="birthday" @change="saveBirthday">
+      <p class="date">{{ birthday }}</p>
+      <p class="title"><u>{{ apodDataOfBirthday.title }}</u></p>
+      <div class="image">
+          <img v-bind:src="apodDataOfBirthday.url"/>
+      </div>
+      <p class="author"><i>{{ apodDataOfBirthday.copyright }}</i></p>
+      <p>{{ apodDataOfBirthday.explanation }}</p>
+  </div>
 </template>
 
 <script>

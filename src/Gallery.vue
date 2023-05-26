@@ -19,7 +19,7 @@ import BirthdayComponent from './components/BirthdayComponent.vue'
 import {getDataOfToday, getDataFromDate} from '@/services/api/apodAPI.js'
 
 export default {
-  name: 'apodGallery',
+  name: 'GalleryComponent',
   components: {
     PictureComponent,
     DateComponent,

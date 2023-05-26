@@ -5,10 +5,10 @@
 </template>
 
 <script>
-  export default {
-    name: 'ExplanationComponent',
-    props: ["explanation"]
-  }
+export default {
+  name: 'ExplanationComponent',
+  props: ["explanation"]
+}
 </script>
 
 <style>
